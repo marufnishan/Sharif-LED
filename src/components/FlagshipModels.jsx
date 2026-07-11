@@ -85,7 +85,7 @@ function ModelGraphic({ variant, lit, glow }) {
 }
 
 export default function FlagshipModels() {
-  const [isNight, setIsNight] = useState(false)
+  const [isNight, setIsNight] = useState(true)
 
   return (
     <section id="modeles" className="py-24 lg:py-32">
