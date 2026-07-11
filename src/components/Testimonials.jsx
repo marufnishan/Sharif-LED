@@ -50,6 +50,9 @@ export default function Testimonials() {
                 <img
                   src={`https://picsum.photos/seed/${t.seed}/80/80`}
                   alt=""
+                  width={80}
+                  height={80}
+                  loading="lazy"
                   className="h-10 w-10 rounded-full object-cover"
                 />
                 <div>

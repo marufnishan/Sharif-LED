@@ -103,6 +103,7 @@ export default function FlagshipModels() {
                   <img
                     src={model.image}
                     alt={`Lettre lumineuse ${model.name}`}
+                    loading="lazy"
                     className="h-full w-full object-contain transition-all duration-500"
                     style={{
                       filter: isNight ? 'none' : 'grayscale(0.9) brightness(0.55) contrast(0.9)',

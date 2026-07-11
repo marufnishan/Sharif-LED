@@ -3,9 +3,9 @@ import logo from '../assets/logo-dark.png'
 
 const NAV_LINKS = [
   { href: '#services', label: 'Services' },
+  { href: '#process', label: 'Notre process' },
   { href: '#modeles', label: 'Modèles' },
   { href: '#realisations', label: 'Réalisations' },
-  { href: '#process', label: 'Notre process' },
   { href: '#avis', label: 'Avis clients' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -29,7 +29,13 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#accueil" className="flex items-center">
-          <img src={logo} alt="Vector Sign" className="h-11 w-auto sm:h-14" />
+          <img
+            src={logo}
+            alt="Vector Sign"
+            className="h-11 w-auto sm:h-14"
+            width={500}
+            height={229}
+          />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

@@ -15,18 +15,8 @@ const SERVICES = [
     ),
   },
   {
-    title: 'Vitrophanie',
-    desc: 'Habillez vos vitrines avec des films décoratifs, adhésifs personnalisés et solutions de communication élégantes.',
-    icon: (
-      <>
-        <rect x="3" y="4" width="18" height="16" rx="1" />
-        <path d="M3 10h18M9 4v16" />
-      </>
-    ),
-  },
-  {
-    title: 'Marquage de Véhicules',
-    desc: 'Transformez vos véhicules en véritables supports publicitaires grâce à un marquage durable et impactant.',
+    title: 'Vitrophanie & Marquage Véhicules',
+    desc: 'Films décoratifs pour vos vitrines et marquage adhésif durable pour vos véhicules, pour une communication cohérente sur tous vos supports.',
     icon: (
       <path d="M3 13l1.5-4.5A2 2 0 016.4 7h11.2a2 2 0 011.9 1.5L21 13m-18 0v5a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1v-5m-18 0h18M6.5 16a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm11 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
     ),

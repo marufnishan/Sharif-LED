@@ -59,7 +59,10 @@ export default function Hero() {
               src={banner}
               alt="Enseigne néon lumineuse sur mesure Vector Sign"
               className="h-full w-full object-cover"
+              width={1100}
+              height={1100}
               loading="eager"
+              fetchpriority="high"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-white/10 bg-surface-2/95 px-6 py-4 shadow-2xl backdrop-blur sm:block">

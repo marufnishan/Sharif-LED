@@ -44,6 +44,8 @@ export default function FeaturedProduct() {
                 src={isNight ? saloneNight : saloneDay}
                 alt="Enseigne drapeau lumineuse ronde et double face"
                 loading="lazy"
+                width={757}
+                height={1051}
                 className="h-full w-full object-cover transition-opacity duration-300"
               />
             </div>

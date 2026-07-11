@@ -22,7 +22,14 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <a href="#accueil" className="inline-flex items-center">
-              <img src={logo} alt="Vector Sign" className="h-12 w-auto" />
+              <img
+                src={logo}
+                alt="Vector Sign"
+                className="h-12 w-auto"
+                width={500}
+                height={229}
+                loading="lazy"
+              />
             </a>
             <p className="mt-4 max-w-xs text-sm text-slate-400">
               Votre partenaire en communication visuelle : enseignes lumineuses, signalétique et

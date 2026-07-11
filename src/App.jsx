@@ -21,11 +21,11 @@ function App() {
         <Hero />
         <TrustedBy />
         <Services />
-        <WhyUs />
-        <FlagshipModels />
         <FeaturedProduct />
-        <Portfolio />
+        <WhyUs />
         <Process />
+        <FlagshipModels />
+        <Portfolio />
         <Testimonials />
         <Contact />
       </main>
