@@ -1,18 +1,32 @@
 import { useState } from 'react'
+import { submitNetlifyForm } from '../lib/netlifyForms'
 
 const CONTACT_INFO = [
-  { label: 'Adresse', value: '12 Rue des Lumières, 67000 Strasbourg' },
+  { label: 'Adresse', value: '27 Rue Saglio, 67100 Strasbourg' },
   { label: 'Téléphone', value: '+33 3 88 00 00 00' },
-  { label: 'Email', value: 'contact@neoncraft.fr' },
+  { label: 'Email', value: 'contact@vectorsign.fr' },
   { label: 'Horaires', value: 'Lun–Ven · 8h30–18h00' },
 ]
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
+    setSubmitting(true)
+    setError(false)
+    const fields = Object.fromEntries(new FormData(e.target))
+    try {
+      const res = await submitNetlifyForm('contact', fields)
+      if (!res.ok) throw new Error('Request failed')
+      setSent(true)
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -108,12 +122,20 @@ export default function Contact() {
                     className="mt-2 w-full resize-none rounded-xl border border-white/10 bg-surface-2 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none focus:border-neon-2"
                   />
                 </div>
+                {error && (
+                  <p className="text-sm text-red-400 sm:col-span-2">
+                    Une erreur est survenue lors de l&rsquo;envoi. Merci de réessayer ou de nous
+                    appeler directement.
+                  </p>
+                )}
+
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-gradient-to-r from-neon to-neon-2 px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.02] sm:w-auto"
+                    disabled={submitting}
+                    className="w-full rounded-xl bg-gradient-to-r from-neon to-neon-2 px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.02] disabled:opacity-60 sm:w-auto"
                   >
-                    Envoyer ma demande
+                    {submitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
                   </button>
                 </div>
               </form>

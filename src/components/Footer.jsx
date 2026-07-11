@@ -1,7 +1,7 @@
 const FOOTER_LINKS = [
   {
     title: 'Services',
-    links: ['Enseignes LED', 'Lettres découpées', 'Néon flex', 'Totems', 'Signalétique'],
+    links: ['Enseignes lumineuses', 'Lettres 3D', 'Néons LED', 'Vitrophanie', 'Impression grand format'],
   },
   {
     title: 'Entreprise',
@@ -19,14 +19,15 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <a href="#accueil" className="flex items-center gap-2 font-display text-xl font-semibold text-white">
+            <a href="#accueil" className="flex items-center gap-2 font-display text-xl font-semibold uppercase tracking-wide text-white">
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-neon to-neon-2 text-ink">
-                N
+                V
               </span>
-              Néon<span className="text-gradient">Craft</span>
+              Vector<span className="text-gradient"> Sign</span>
             </a>
             <p className="mt-4 max-w-xs text-sm text-slate-400">
-              Fabricant d&rsquo;enseignes lumineuses et de signalétique sur mesure, basé à Strasbourg.
+              Votre partenaire en communication visuelle : enseignes lumineuses, signalétique et
+              impression grand format, partout en France.
             </p>
           </div>
 
@@ -48,9 +49,9 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} NéonCraft. Tous droits réservés.
+            © {new Date().getFullYear()} Vector Sign. Tous droits réservés.
           </p>
-          <p className="text-xs text-slate-500">12 Rue des Lumières, 67000 Strasbourg</p>
+          <p className="text-xs text-slate-500">27 Rue Saglio, 67100 Strasbourg</p>
         </div>
       </div>
     </footer>

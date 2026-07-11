@@ -29,7 +29,7 @@ export default function Testimonials() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-wider text-neon-2">Avis clients</p>
           <h2 className="mt-3 font-display text-3xl font-semibold text-white sm:text-4xl">
-            Ils font confiance à NéonCraft
+            Ils font confiance à Vector Sign
           </h2>
         </div>
 

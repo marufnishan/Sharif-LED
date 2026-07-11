@@ -35,7 +35,7 @@ export default function Portfolio() {
             >
               <img
                 src={`https://picsum.photos/seed/${project.seed}/700/560`}
-                alt={`Réalisation NéonCraft : ${project.name}`}
+                alt={`Réalisation Vector Sign : ${project.name}`}
                 loading="lazy"
                 className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

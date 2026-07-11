@@ -27,11 +27,11 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#accueil" className="flex items-center gap-2 font-display text-xl font-semibold text-white">
+        <a href="#accueil" className="flex items-center gap-2 font-display text-xl font-semibold uppercase tracking-wide text-white">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-neon to-neon-2 text-ink">
-            N
+            V
           </span>
-          Néon<span className="text-gradient">Craft</span>
+          Vector<span className="text-gradient"> Sign</span>
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

@@ -1,3 +1,5 @@
+import banner from '../assets/banner.jpeg'
+
 export default function Hero() {
   return (
     <section id="accueil" className="relative overflow-hidden pt-36 pb-24 lg:pt-48 lg:pb-32">
@@ -9,18 +11,17 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center lg:px-8">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-surface px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-neon-2">
-            Fabricant &middot; Strasbourg &amp; Grand Est
+            Enseignes lumineuses • Signalétique • Impression grand format
           </span>
 
           <h1 className="mt-6 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Donnez de l&rsquo;éclat à votre commerce avec des
-            <span className="text-gradient"> enseignes lumineuses</span> sur mesure
+            Votre partenaire en <span className="text-gradient">communication visuelle</span> en France
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-slate-400">
-            NéonCraft conçoit, fabrique et installe vos enseignes LED, néons flex, lettres découpées
-            et signalétique à Strasbourg et dans toute l&rsquo;Alsace. Étude, fabrication et pose
-            assurées par notre atelier.
+            Nous concevons, fabriquons et installons des enseignes, lettres 3D, néons LED,
+            vitrophanie, marquage de véhicules et solutions d&rsquo;impression grand format pour
+            valoriser votre entreprise.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -55,8 +56,8 @@ export default function Hero() {
         <div className="relative">
           <div className="neon-ring overflow-hidden rounded-3xl border border-white/10 bg-surface">
             <img
-              src="https://picsum.photos/seed/neoncraft-hero/900/1000"
-              alt="Enseigne lumineuse sur mesure installée sur une devanture"
+              src={banner}
+              alt="Enseigne néon lumineuse sur mesure Vector Sign"
               className="h-full w-full object-cover"
               loading="eager"
             />

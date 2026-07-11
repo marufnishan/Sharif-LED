@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { submitNetlifyForm } from '../lib/netlifyForms'
 
 const PHONE = '+33 3 88 00 00 00'
 const PHONE_HREF = 'tel:+33388000000'
-const EMAIL = 'contact@neoncraft.fr'
+const EMAIL = 'contact@vectorsign.fr'
 
 function IconPhone(props) {
   return (
@@ -42,15 +43,27 @@ export default function FloatingContact() {
   const [open, setOpen] = useState(false)
   const [view, setView] = useState('menu')
   const [phone, setPhone] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
 
   function close() {
     setOpen(false)
     setTimeout(() => setView('menu'), 200)
   }
 
-  function handleCallbackSubmit(e) {
+  async function handleCallbackSubmit(e) {
     e.preventDefault()
-    setView('sent')
+    setSubmitting(true)
+    setError(false)
+    try {
+      const res = await submitNetlifyForm('callback-request', { phone })
+      if (!res.ok) throw new Error('Request failed')
+      setView('sent')
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -129,6 +142,12 @@ export default function FloatingContact() {
                 placeholder="06 00 00 00 00"
                 className="mt-2 w-full rounded-xl border border-white/10 bg-surface-2 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none focus:border-neon-2"
               />
+              {error && (
+                <p className="mt-2 text-xs text-red-400">
+                  Une erreur est survenue. Merci de réessayer ou de nous appeler directement.
+                </p>
+              )}
+
               <div className="mt-3 flex gap-2">
                 <button
                   type="button"
@@ -139,9 +158,10 @@ export default function FloatingContact() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 rounded-xl bg-gradient-to-r from-neon to-neon-2 px-3 py-2.5 text-xs font-semibold text-ink"
+                  disabled={submitting}
+                  className="flex-1 rounded-xl bg-gradient-to-r from-neon to-neon-2 px-3 py-2.5 text-xs font-semibold text-ink disabled:opacity-60"
                 >
-                  Demander un rappel
+                  {submitting ? 'Envoi...' : 'Demander un rappel'}
                 </button>
               </div>
             </form>
@@ -150,7 +170,7 @@ export default function FloatingContact() {
           {view === 'sent' && (
             <div className="p-5 text-center">
               <p className="text-sm text-slate-300">
-                Merci&nbsp;! Un conseiller NéonCraft vous rappelle très prochainement au{' '}
+                Merci&nbsp;! Un conseiller Vector Sign vous rappelle très prochainement au{' '}
                 <span className="font-semibold text-white">{phone}</span>.
               </p>
             </div>
