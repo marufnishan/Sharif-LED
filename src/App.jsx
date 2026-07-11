@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import FloatingContact from './components/FloatingContact'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       </main>
       <Footer />
       <FloatingContact />
+      <WhatsAppButton />
     </div>
   )
 }
