@@ -88,7 +88,7 @@ export default function FlagshipModels() {
   const [isNight, setIsNight] = useState(true)
 
   return (
-    <section id="modeles" className="py-24 lg:py-32">
+    <section id="modeles" className="py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-wider text-neon-2">Catalogue</p>
@@ -102,6 +102,7 @@ export default function FlagshipModels() {
 
           <button
             type="button"
+            translate="no"
             onClick={() => setIsNight((v) => !v)}
             className={`mt-8 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors duration-300 ${
               isNight

@@ -13,12 +13,13 @@ export default function FeaturedProduct() {
   const [isNight, setIsNight] = useState(true)
 
   return (
-    <section id="drapeau" className="py-24 lg:py-32">
+    <section id="drapeau" className="py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-14 rounded-3xl border border-white/10 bg-surface p-8 lg:grid-cols-2 lg:items-center lg:p-14">
           <div className="relative order-2 lg:order-1">
             <button
               type="button"
+              translate="no"
               onClick={() => setIsNight((v) => !v)}
               className={`absolute left-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold shadow-lg backdrop-blur transition-colors duration-300 ${
                 isNight

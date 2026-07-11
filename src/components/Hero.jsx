@@ -2,7 +2,7 @@ import banner from '../assets/banner.jpeg'
 
 export default function Hero() {
   return (
-    <section id="accueil" className="relative overflow-hidden pt-36 pb-24 lg:pt-48 lg:pb-32">
+    <section id="accueil" className="relative overflow-hidden pt-32 pb-14 lg:pt-40 lg:pb-20">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-[-10%] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-neon/20 blur-[120px]" />
         <div className="absolute right-[-10%] top-[30%] h-[28rem] w-[28rem] rounded-full bg-neon-2/20 blur-[120px]" />

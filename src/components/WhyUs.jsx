@@ -23,7 +23,7 @@ const REASONS = [
 
 export default function WhyUs() {
   return (
-    <section id="pourquoi-nous" className="py-24 lg:py-32">
+    <section id="pourquoi-nous" className="py-14 lg:py-20">
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
         <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
           Pourquoi <span className="text-gradient">Vector Sign</span> ?

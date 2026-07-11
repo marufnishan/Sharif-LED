@@ -30,7 +30,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32">
+    <section id="contact" className="py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-14 rounded-3xl border border-white/10 bg-surface p-8 lg:grid-cols-5 lg:p-14">
           <div className="lg:col-span-2">
