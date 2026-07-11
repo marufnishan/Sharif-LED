@@ -14,11 +14,11 @@ export default function Hero() {
             Enseignes lumineuses • Signalétique • Impression grand format
           </span>
 
-          <h1 className="mt-6 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 font-display text-3xl font-semibold leading-[1.15] text-white sm:text-5xl lg:text-6xl">
             Votre partenaire en <span className="text-gradient">communication visuelle</span> en France
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg text-slate-400">
+          <p className="mt-4 max-w-xl text-base text-slate-400 sm:mt-6 sm:text-lg">
             Nous concevons, fabriquons et installons des enseignes, lettres 3D, néons LED,
             vitrophanie, marquage de véhicules et solutions d&rsquo;impression grand format pour
             valoriser votre entreprise.

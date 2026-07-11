@@ -75,7 +75,7 @@ export default function FloatingContact() {
   }
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {open && (
         <div className="w-72 overflow-hidden rounded-2xl border border-white/10 bg-surface shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
@@ -173,15 +173,15 @@ export default function FloatingContact() {
         </div>
       )}
 
-      <div className="neon-ring flex items-stretch overflow-hidden rounded-full bg-gradient-to-r from-neon to-neon-2 shadow-2xl">
+      <div className="flex items-stretch overflow-hidden rounded-full border border-white/10 bg-surface shadow-2xl">
         <a
           href={PHONE_HREF}
-          className="flex items-center gap-2 px-5 py-3 text-ink transition-transform hover:scale-[1.02]"
+          className="flex items-center gap-1 px-2.5 py-1.5 text-neon transition-transform hover:scale-[1.02]"
         >
-          <IconPhone className="h-4 w-4 shrink-0" />
+          <IconPhone className="h-3 w-3 shrink-0" />
           <span>
-            <span className="block text-sm font-semibold leading-tight">Nous appeler</span>
-            <span className="block text-xs leading-tight text-ink/70">{PHONE}</span>
+            <span className="block text-[11px] font-semibold leading-tight">Nous appeler</span>
+            <span className="block text-[10px] leading-tight text-slate-400">{PHONE}</span>
           </span>
         </a>
         <button
@@ -189,9 +189,9 @@ export default function FloatingContact() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label="Autres moyens de contact"
-          className="flex items-center border-l border-ink/15 px-4 text-ink transition-colors hover:bg-black/5"
+          className="flex items-center border-l border-white/10 px-2 text-slate-300 transition-colors hover:bg-white/5"
         >
-          {open ? <IconClose className="h-4 w-4" /> : <IconChevronUp className="h-4 w-4" />}
+          {open ? <IconClose className="h-3 w-3" /> : <IconChevronUp className="h-3 w-3" />}
         </button>
       </div>
     </div>

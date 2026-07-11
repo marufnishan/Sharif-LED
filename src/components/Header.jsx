@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import logo from '../assets/logo-dark.png'
 
 const NAV_LINKS = [
   { href: '#services', label: 'Services' },
@@ -27,11 +28,8 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#accueil" className="flex items-center gap-2 font-display text-xl font-semibold uppercase tracking-wide text-white">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-neon to-neon-2 text-ink">
-            V
-          </span>
-          Vector<span className="text-gradient"> Sign</span>
+        <a href="#accueil" className="flex items-center">
+          <img src={logo} alt="Vector Sign" className="h-11 w-auto sm:h-14" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

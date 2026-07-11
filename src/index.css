@@ -7,9 +7,10 @@
   --color-ink: #0b0d12;
   --color-surface: #12151c;
   --color-surface-2: #191d27;
-  --color-neon: #ff2ea6;
-  --color-neon-2: #33e0ff;
-  --color-amber: #ffb020;
+  --color-neon: #e5252e;
+  --color-neon-2: #1e88e5;
+  --color-amber: #f7941d;
+  --color-violet: #7b2cbf;
 }
 
 @layer base {
@@ -29,7 +30,7 @@
     color: transparent;
   }
   .neon-ring {
-    box-shadow: 0 0 0 1px rgba(255, 46, 166, 0.3), 0 0 40px -10px rgba(255, 46, 166, 0.5);
+    box-shadow: 0 0 0 1px rgba(229, 37, 46, 0.3), 0 0 40px -10px rgba(229, 37, 46, 0.5);
   }
 }
 

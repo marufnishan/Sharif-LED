@@ -7,7 +7,7 @@ const MODELS = [
     desc: 'Lettres boîtiers individuelles avec retour',
     features: ['Fabriqué en inox brossé', 'Éclairage face avant', 'Laquage possible sur les retours'],
     variant: 'ring',
-    glow: '#ffb020',
+    glow: '#f7941d',
   },
   {
     code: 'V05',
@@ -15,7 +15,7 @@ const MODELS = [
     desc: 'Lettres boîtiers individuelles sans retour',
     features: ['Fabriqué en inox brossé', 'Éclairage face avant', 'Laquage possible sur les retours'],
     variant: 'ring',
-    glow: '#33e0ff',
+    glow: '#1e88e5',
   },
   {
     code: 'V08',
@@ -23,7 +23,7 @@ const MODELS = [
     desc: 'Lettres rétro-éclairées par la tranche',
     features: ['Face avant opaque en Dibond 3mm', 'Bandeau LED sur la tranche'],
     variant: 'halo',
-    glow: '#ff2ea6',
+    glow: '#e5252e',
   },
   {
     code: 'V14',
@@ -31,7 +31,7 @@ const MODELS = [
     desc: 'Caisson ajouré, lumière diffusante',
     features: ['Matière PVC, Dibond, Plexiglas', 'Découpe laser des lettres', 'Éclairage face avant'],
     variant: 'matrix',
-    glow: '#ffb020',
+    glow: '#7b2cbf',
   },
 ]
 

@@ -1,3 +1,5 @@
+import logo from '../assets/logo-dark.png'
+
 const FOOTER_LINKS = [
   {
     title: 'Services',
@@ -19,11 +21,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <a href="#accueil" className="flex items-center gap-2 font-display text-xl font-semibold uppercase tracking-wide text-white">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-neon to-neon-2 text-ink">
-                V
-              </span>
-              Vector<span className="text-gradient"> Sign</span>
+            <a href="#accueil" className="inline-flex items-center">
+              <img src={logo} alt="Vector Sign" className="h-12 w-auto" />
             </a>
             <p className="mt-4 max-w-xs text-sm text-slate-400">
               Votre partenaire en communication visuelle : enseignes lumineuses, signalétique et
