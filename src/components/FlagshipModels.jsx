@@ -1,88 +1,56 @@
 import { useState } from 'react'
+import g1 from '../assets/G1.jpeg'
+import g2 from '../assets/G2.jpeg'
+import g3 from '../assets/G3.jpeg'
+import g4 from '../assets/G4.jpeg'
+import g5 from '../assets/G5.jpeg'
+import g6 from '../assets/G6.jpeg'
+import g7 from '../assets/G7.jpeg'
 
 const MODELS = [
   {
-    code: 'V01',
-    name: 'Modèle V01',
-    desc: 'Lettres boîtiers individuelles avec retour',
-    features: ['Fabriqué en inox brossé', 'Éclairage face avant', 'Laquage possible sur les retours'],
-    variant: 'ring',
-    glow: '#f7941d',
+    code: 'G1',
+    name: 'Blanc Satiné',
+    desc: 'Face lumineuse blanche, finition satinée, pour un rendu épuré.',
+    image: g1,
   },
   {
-    code: 'V05',
-    name: 'Modèle V05',
-    desc: 'Lettres boîtiers individuelles sans retour',
-    features: ['Fabriqué en inox brossé', 'Éclairage face avant', 'Laquage possible sur les retours'],
-    variant: 'ring',
-    glow: '#1e88e5',
+    code: 'G2',
+    name: 'Cuivre Mat',
+    desc: 'Finition cuivrée mate pour une enseigne chaleureuse et haut de gamme.',
+    image: g2,
   },
   {
-    code: 'V08',
-    name: 'Modèle V08',
-    desc: 'Lettres rétro-éclairées par la tranche',
-    features: ['Face avant opaque en Dibond 3mm', 'Bandeau LED sur la tranche'],
-    variant: 'halo',
-    glow: '#e5252e',
+    code: 'G3',
+    name: 'Jaune Vif',
+    desc: 'Jaune éclatant avec tranche noire contrastée pour un impact maximal.',
+    image: g3,
   },
   {
-    code: 'V14',
-    name: 'Modèle V14',
-    desc: 'Caisson ajouré, lumière diffusante',
-    features: ['Matière PVC, Dibond, Plexiglas', 'Découpe laser des lettres', 'Éclairage face avant'],
-    variant: 'matrix',
-    glow: '#7b2cbf',
+    code: 'G4',
+    name: 'Halo Rouge',
+    desc: 'Lettre noire mate avec rétro-éclairage halo rouge pour un effet signature.',
+    image: g4,
+  },
+  {
+    code: 'G5',
+    name: 'Halo Blanc',
+    desc: 'Laqué noir brillant avec halo blanc, élégant de jour comme de nuit.',
+    image: g5,
+  },
+  {
+    code: 'G6',
+    name: 'Rouge & Halo Blanc',
+    desc: 'Face rouge éclatante associée à un halo blanc pour une double lecture.',
+    image: g6,
+  },
+  {
+    code: 'G7',
+    name: 'Jaune Chaleureux',
+    desc: 'Éclairage jaune chaud et diffus pour une ambiance accueillante.',
+    image: g7,
   },
 ]
-
-function ModelGraphic({ variant, lit, glow }) {
-  const stroke = lit ? glow : '#5b6272'
-  const filter = lit ? `drop-shadow(0 0 10px ${glow}) drop-shadow(0 0 22px ${glow}66)` : 'none'
-
-  if (variant === 'matrix') {
-    const pattern = [
-      1, 0, 1, 1, 0, 1,
-      1, 1, 1, 0, 1, 1,
-      1, 0, 1, 1, 0, 1,
-      0, 1, 0, 1, 1, 0,
-    ]
-    return (
-      <div className="grid grid-cols-6 gap-1.5" style={{ filter, transition: 'filter 500ms ease' }}>
-        {pattern.map((on, i) => (
-          <span
-            key={i}
-            className="h-2.5 w-2.5 rounded-[2px] transition-colors duration-500"
-            style={{ background: on ? (lit ? glow : '#5b6272') : 'transparent' }}
-          />
-        ))}
-      </div>
-    )
-  }
-
-  if (variant === 'halo') {
-    return (
-      <svg viewBox="0 0 100 100" className="h-20 w-20" style={{ filter, transition: 'filter 500ms ease' }}>
-        <circle cx="50" cy="50" r="34" fill="none" stroke={stroke} strokeWidth="10" style={{ transition: 'stroke 500ms ease' }} />
-      </svg>
-    )
-  }
-
-  return (
-    <svg viewBox="0 0 100 100" className="h-20 w-20" style={{ filter, transition: 'filter 500ms ease' }}>
-      <circle
-        cx="50"
-        cy="50"
-        r="32"
-        fill="none"
-        stroke={stroke}
-        strokeWidth="9"
-        strokeDasharray="164 40"
-        strokeLinecap="round"
-        style={{ transition: 'stroke 500ms ease' }}
-      />
-    </svg>
-  )
-}
 
 export default function FlagshipModels() {
   const [isNight, setIsNight] = useState(true)
@@ -96,7 +64,7 @@ export default function FlagshipModels() {
             Nos Modèles <span className="text-gradient">Phares</span>
           </h2>
           <p className="mt-4 text-slate-400">
-            Découvrez nos enseignes lumineuses les plus demandées. Passez en mode nuit pour voir
+            Découvrez nos finitions de lettres les plus demandées. Passez en mode nuit pour voir
             l&rsquo;effet en action.
           </p>
 
@@ -131,28 +99,19 @@ export default function FlagshipModels() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {MODELS.map((model) => (
               <div key={model.code} className="rounded-2xl border border-white/10 bg-ink/40 p-5">
-                <span className="inline-flex rounded-md bg-amber px-2 py-0.5 text-xs font-bold text-ink">
-                  {model.code}
-                </span>
-
-                <div
-                  className="mt-4 flex h-32 items-center justify-center rounded-xl transition-colors duration-500"
-                  style={{ background: isNight ? '#05060a' : '#1c1f27' }}
-                >
-                  <ModelGraphic variant={model.variant} lit={isNight} glow={model.glow} />
+                <div className="h-36 overflow-hidden rounded-xl bg-[#1c1f27]">
+                  <img
+                    src={model.image}
+                    alt={`Lettre lumineuse ${model.name}`}
+                    className="h-full w-full object-contain transition-all duration-500"
+                    style={{
+                      filter: isNight ? 'none' : 'grayscale(0.9) brightness(0.55) contrast(0.9)',
+                    }}
+                  />
                 </div>
 
                 <h3 className="mt-4 font-display text-base font-semibold text-white">{model.name}</h3>
                 <p className="mt-1 text-xs text-slate-400">{model.desc}</p>
-
-                <ul className="mt-3 space-y-1.5">
-                  {model.features.map((f) => (
-                    <li key={f} className="flex items-start gap-1.5 text-xs text-slate-400">
-                      <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-amber" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
