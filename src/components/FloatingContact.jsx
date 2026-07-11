@@ -39,6 +39,14 @@ function IconClose(props) {
   )
 }
 
+function IconChevronUp(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M6 15l6-6 6 6" />
+    </svg>
+  )
+}
+
 export default function FloatingContact() {
   const [open, setOpen] = useState(false)
   const [view, setView] = useState('menu')
@@ -86,19 +94,6 @@ export default function FloatingContact() {
 
           {view === 'menu' && (
             <div className="p-2">
-              <a
-                href={PHONE_HREF}
-                className="flex items-center gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-white/5"
-              >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
-                  <IconPhone className="h-4 w-4" />
-                </span>
-                <span>
-                  <span className="block text-sm font-medium text-white">Appeler maintenant</span>
-                  <span className="block text-xs text-slate-400">{PHONE}</span>
-                </span>
-              </a>
-
               <a
                 href={`mailto:${EMAIL}`}
                 className="flex items-center gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-white/5"
@@ -178,15 +173,27 @@ export default function FloatingContact() {
         </div>
       )}
 
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        className="neon-ring flex items-center gap-2 rounded-full bg-gradient-to-r from-neon to-neon-2 px-5 py-3.5 text-sm font-semibold text-ink shadow-2xl transition-transform hover:scale-105"
-      >
-        {open ? <IconClose className="h-4 w-4" /> : <IconPhone className="h-4 w-4" />}
-        {open ? 'Fermer' : 'Être rappelé'}
-      </button>
+      <div className="neon-ring flex items-stretch overflow-hidden rounded-full bg-gradient-to-r from-neon to-neon-2 shadow-2xl">
+        <a
+          href={PHONE_HREF}
+          className="flex items-center gap-2 px-5 py-3 text-ink transition-transform hover:scale-[1.02]"
+        >
+          <IconPhone className="h-4 w-4 shrink-0" />
+          <span>
+            <span className="block text-sm font-semibold leading-tight">Nous appeler</span>
+            <span className="block text-xs leading-tight text-ink/70">{PHONE}</span>
+          </span>
+        </a>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label="Autres moyens de contact"
+          className="flex items-center border-l border-ink/15 px-4 text-ink transition-colors hover:bg-black/5"
+        >
+          {open ? <IconClose className="h-4 w-4" /> : <IconChevronUp className="h-4 w-4" />}
+        </button>
+      </div>
     </div>
   )
 }
