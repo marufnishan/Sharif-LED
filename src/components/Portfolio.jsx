@@ -1,4 +1,5 @@
 import styleLetters from '../assets/style.jpeg'
+import pharmacyCross from '../assets/26.jpeg'
 
 const UNSPLASH = (id) => `https://images.unsplash.com/photo-${id}?fm=jpg&q=70&w=700&h=560&auto=format&fit=crop`
 
@@ -29,7 +30,7 @@ const PROJECTS = [
     tag: 'Caisson lumineux',
   },
   {
-    image: UNSPLASH('1638366170204-d5b084f93872'),
+    image: pharmacyCross,
     name: 'Pharmacie du Marché',
     tag: 'Croix pharmacie LED',
   },
