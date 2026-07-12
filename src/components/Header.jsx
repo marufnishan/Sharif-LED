@@ -32,7 +32,7 @@ export default function Header() {
           <img
             src={logo}
             alt="Vector Sign"
-            className="h-11 w-auto sm:h-14"
+            className="h-14 w-auto sm:h-[4.5rem]"
             width={500}
             height={229}
           />

@@ -173,15 +173,15 @@ export default function FloatingContact() {
         </div>
       )}
 
-      <div className="flex items-stretch overflow-hidden rounded-full border border-white/10 bg-surface shadow-2xl">
+      <div className="flex items-stretch overflow-hidden rounded-full bg-amber shadow-2xl shadow-amber/30">
         <a
           href={PHONE_HREF}
-          className="flex items-center gap-1 px-2.5 py-1.5 text-neon transition-transform hover:scale-[1.02]"
+          className="flex items-center gap-1 px-2.5 py-1.5 text-ink transition-transform hover:scale-[1.02]"
         >
           <IconPhone className="h-3 w-3 shrink-0" />
           <span>
             <span className="block text-[11px] font-semibold leading-tight">Nous appeler</span>
-            <span className="block text-[10px] leading-tight text-slate-400">{PHONE}</span>
+            <span className="block text-[10px] font-medium leading-tight text-ink">{PHONE}</span>
           </span>
         </a>
         <button
@@ -189,7 +189,7 @@ export default function FloatingContact() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label="Autres moyens de contact"
-          className="flex items-center border-l border-white/10 px-2 text-slate-300 transition-colors hover:bg-white/5"
+          className="flex items-center border-l border-ink/15 px-2 text-ink transition-colors hover:bg-black/5"
         >
           {open ? <IconClose className="h-3 w-3" /> : <IconChevronUp className="h-3 w-3" />}
         </button>
