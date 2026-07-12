@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-import TrustedBy from './components/TrustedBy'
+import OtherServices from './components/OtherServices'
 import Services from './components/Services'
 import WhyUs from './components/WhyUs'
 import FlagshipModels from './components/FlagshipModels'
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <TrustedBy />
+        <OtherServices />
         <Services />
         <FeaturedProduct />
         <WhyUs />

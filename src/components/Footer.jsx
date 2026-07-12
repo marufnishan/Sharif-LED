@@ -53,11 +53,15 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} Vector Sign. Tous droits réservés.
           </p>
           <p className="text-xs text-slate-500">27 Rue Saglio, 67100 Strasbourg</p>
+          <p className="text-xs text-slate-500">
+            Design &amp; développé par{' '}
+            <span className="font-medium text-slate-400">Junaina IT Solutions</span>
+          </p>
         </div>
       </div>
     </footer>
